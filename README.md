@@ -14,7 +14,7 @@ This repo is packaged so that **anyone can run inference on their own FASTA file
 
 ## Table of Contents
 1. [Requirements](#1-requirements)  
-2. [Build the Docker image](#2-build-the-docker-image)  
+2. [Pull the Docker image](#2-build-the-docker-image)  
 3. [Run inference on YOUR files (Docker)](#3-run-inference-on-your-files-docker)  
    3.1 [Modes: Lite vs MSA](#31-modes-lite-vs-msa-how-to-switch)  
    3.2 [Linux/macOS: Lite mode](#32-linuxmacos-lite-mode-fasta-only)  
