@@ -1,6 +1,3 @@
-Yes. Here is a **single, complete README.md** (one file) with headings + all commands included. Save it as `README.md` in your repo root.
-
-````md
 # Hybrid Protein Backbone Prediction (ProteinNet Transformer)
 
 A lightweight Transformer trained on **ProteinNet CASP12** to predict **Cα backbone coordinates** from protein sequence.
