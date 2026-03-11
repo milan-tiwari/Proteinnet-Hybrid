@@ -42,16 +42,11 @@ This repo is packaged so that **anyone can run inference on their own FASTA file
 
 ---
 
-## 2) Build the Docker image
-
-From the repo root (folder containing `docker/`, `src/`, `predict.py`, `artifacts/`):
+## 2) Pull the Docker image
 
 ```bash
-docker build -f docker/Dockerfile.cpu -t proteinnet-hybrid:cpu .
+docker pull mtiwar260/proteinnet-hybrid:latest
 ````
-
-If you see `docker: command not found`, install Docker Desktop and restart your terminal.
-
 ---
 
 ## 3) Run inference on YOUR files (Docker)
