@@ -1,0 +1,45 @@
+project:
+  name: "proteinnet-transformer-ca"
+  notes: "Transformer encoder predicting C-alpha coordinates from sequence + evolutionary profile (ProteinNet CASP12)."
+
+data:
+  # Directory created by scripts/preprocess_proteinnet.py
+  # Example: /scratch/<you>/proteinnet/processed/casp12/train_90
+  processed_dir: "data/processed/casp12/train_90"
+  # Optional: cap sequence length (long proteins are expensive). Set to null to keep full length.
+  max_length: 1024
+
+model:
+  vocab_size: 22          # PAD(0) + 20 AA + UNK
+  evo_dim: 21             # ProteinNet evolutionary profile has 21 dims (20 AA + info content)
+  d_model: 256
+  n_heads: 8
+  n_layers: 6
+  dim_feedforward: 1024
+  dropout: 0.1
+
+train:
+  epochs: 20
+  batch_size: 4           # per GPU
+  num_workers: 4
+  lr: 3.0e-4
+  weight_decay: 0.01
+  grad_clip_norm: 1.0
+  amp: true               # mixed precision on A100 is a free win
+  seed: 42
+
+  # checkpointing / logging
+  run_dir: "runs"
+  save_every_steps: 500
+  keep_last_k: 3
+  resume: "auto"          # auto | none | path/to/checkpoint.pt
+
+  # misc
+  log_every_steps: 50
+  validate_every_epochs: 1
+  gradient_accumulation: 1
+
+scheduler:
+  name: "cosine"
+  warmup_steps: 2000
+  min_lr: 1.0e-6

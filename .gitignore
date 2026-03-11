@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# OS
+.DS_Store
+
+# Local runs / data (do NOT commit)
+logs/
+runs/
+proteinnet/
+data/
+checkpoints/
+*.tgz
+
+# Docker cache
+**/.docker/
+
+# Keep artifacts + examples (intentionally committed)
+# artifacts/
+# examples/

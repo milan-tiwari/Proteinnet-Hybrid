@@ -1,0 +1,11 @@
+# Core
+numpy>=1.23
+pyyaml>=6.0
+tqdm>=4.65
+
+# ML
+torch>=2.1
+
+# Logging / viz
+matplotlib>=3.7
+tensorboard>=2.13

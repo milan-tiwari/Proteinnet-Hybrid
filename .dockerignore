@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.git/
+logs/
+notebooks/
+proteinnet/
+data/
+runs/
+*.pt
+*.tgz

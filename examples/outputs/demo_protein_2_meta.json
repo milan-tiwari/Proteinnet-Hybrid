@@ -1,0 +1,9 @@
+{
+  "id": "demo_protein_2",
+  "length": 20,
+  "mode": "lite",
+  "device": "cpu",
+  "dtype": "fp32",
+  "checkpoint": "/Users/milantiwari/Desktop/Protein_detection/artifacts/best.pt",
+  "pdb": "demo_protein_2_pred_ca.pdb"
+}

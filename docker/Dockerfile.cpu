@@ -1,0 +1,24 @@
+FROM python:3.10-slim
+
+WORKDIR /app
+
+# System deps (minimal)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    git wget ca-certificates \
+ && rm -rf /var/lib/apt/lists/*
+
+# Copy only what we need
+COPY src ./src
+COPY configs ./configs
+COPY predict.py ./predict.py
+
+# Install python deps (CPU)
+RUN pip install --no-cache-dir --upgrade pip \
+ && pip install --no-cache-dir \
+    torch \
+    numpy \
+    pyyaml \
+    tqdm \
+    huggingface_hub
+
+ENTRYPOINT ["python", "predict.py"]

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "demo_protein_1",
+    "length": 35,
+    "mode": "lite",
+    "device": "cpu",
+    "dtype": "fp32",
+    "checkpoint": "/root/.cache/huggingface/hub/models--Milan890--proteinnet-hybrid-ca/blobs/1f8f9f35cb44c6529ff9d6c5ab26798f349d378ff796e5f9589f22c573556cfc",
+    "pdb": "demo_protein_1_pred_ca.pdb"
+  },
+  {
+    "id": "demo_protein_2",
+    "length": 20,
+    "mode": "lite",
+    "device": "cpu",
+    "dtype": "fp32",
+    "checkpoint": "/root/.cache/huggingface/hub/models--Milan890--proteinnet-hybrid-ca/blobs/1f8f9f35cb44c6529ff9d6c5ab26798f349d378ff796e5f9589f22c573556cfc",
+    "pdb": "demo_protein_2_pred_ca.pdb"
+  }
+]
